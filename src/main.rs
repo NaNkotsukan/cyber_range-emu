@@ -57,7 +57,7 @@ fn handler(mut stream: TcpStream, mut emu: Emulator) -> Result<(), failure::Erro
 
         if emu.eip == 0x00 {
             info!("end of program.\n");
-            if emu.registers[Register::EAX as usize] == 0x40 {
+            if emu.registers[Register::EAX as usize] == 0x01 {
                 stream.write_all(b"Congratulations! Flag is ctf{original_emulator_is_good!}\n")?;
             } else {
                 stream.write_all(b"Wrong password.\n")?;

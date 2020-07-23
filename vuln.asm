@@ -65,7 +65,7 @@ cmp_check_cnt:
 cmp_flag:
     cmp dword [ebp-0x8],byte +0x0
     jz cmp_end
-    mov dword [ebp-0xc],0x40
+    mov dword [ebp-0xc],0x1
 
 cmp_end:
     mov eax,[ebp-0xc]
